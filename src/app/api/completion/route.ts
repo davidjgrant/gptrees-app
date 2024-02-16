@@ -43,7 +43,7 @@ export async function POST(req: Request) {
     return Response.error();
   }
 
-  const cleanData = transformAITextToJSON(response.choices[0].message.content);
+  const cleanData = transformAITextToJSON(response?.choices[0]?.message?.content ?? '');
 
   return NextResponse.json(cleanData);
 };
