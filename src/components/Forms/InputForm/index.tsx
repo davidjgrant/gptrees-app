@@ -61,7 +61,7 @@ export function InputForm({ inputData, image }: InputFormProps) {
         title: "Success",
         description: "Tree added successfully",
       });
-      resetValues;
+      resetValues();
     },
     onError: (error) => {
       console.error(error);
@@ -85,8 +85,6 @@ export function InputForm({ inputData, image }: InputFormProps) {
     futurePlans: inputData?.future_plans,
     image,
   };
-
-  console.log("input", input);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -274,15 +272,11 @@ export function InputForm({ inputData, image }: InputFormProps) {
           />
         </div>
         <div className="justify-left flex items-center gap-2">
-          <Button disabled={!form.formState.isDirty} type="submit">
+          <Button disabled={!form.formState.dirtyFields} type="submit">
             Submit
           </Button>
           {inputData && (
-            <Button
-              disabled={!form.formState.isDirty}
-              variant={"secondary"}
-              onClick={resetValues}
-            >
+            <Button variant={"secondary"} onClick={resetValues}>
               Reset
             </Button>
           )}

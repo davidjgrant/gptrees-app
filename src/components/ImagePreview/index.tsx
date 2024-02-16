@@ -31,9 +31,14 @@ export const ImagePreview = ({ images, onDeleteImage }: ImagePreviewProps) => {
           </div>
         </div>
         <div className="flex w-full justify-end">
-          <Button onClick={() => onDeleteImage} variant={"destructive"}>
-            Delete
-          </Button>
+          {images.length > 0 && (
+            <Button
+              onClick={() => onDeleteImage(images[0] ?? "")}
+              variant={"destructive"}
+            >
+              Delete
+            </Button>
+          )}
         </div>
       </div>
     </div>
