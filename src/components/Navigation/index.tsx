@@ -27,6 +27,7 @@ import {
 import { Button } from "../ui/button";
 import { MenuIcon } from "lucide-react";
 import type { Session } from "next-auth";
+import { Separator } from "../ui/separator";
 
 export function Navigation({ session }: { session: Session | null }) {
   return (
@@ -94,34 +95,39 @@ export function Navigation({ session }: { session: Session | null }) {
             <MenuIcon size={24} />
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="h-screen">
           <SheetHeader>
             <SheetTitle>GPTrees</SheetTitle>
             <SheetDescription>
               Upload your favourite tree, leave the rest to us.
             </SheetDescription>
           </SheetHeader>
+          <Separator className="my-6" />
           <div className="grid gap-4 py-4">
-            {!session && (
+            {session && (
               <>
-                <div className="">
+                <div className="mb-2">
                   <Link href="/new" legacyBehavior passHref>
                     Add Tree
                   </Link>
                 </div>
-                <div className="">
-                  <Link href="/new" legacyBehavior passHref>
-                    Documentation
+                <div className="mb-2">
+                  <Link href="/dashboard" legacyBehavior passHref>
+                    Dashboard
                   </Link>
                 </div>
               </>
             )}
           </div>
-          <SheetFooter>
-            <SheetClose asChild>
+          <Separator className="my-6" />
+          <SheetFooter className="mt-auto">
+            <SheetClose
+              asChild
+              className="rounded-sm bg-slate-900 text-white transition hover:bg-slate-500"
+            >
               <Link
                 href={session ? "/api/auth/signout" : "/api/auth/signin"}
-                className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"
+                className="px-10 py-3 text-center font-semibold no-underline"
               >
                 {session ? "Sign out" : "Sign in"}
               </Link>

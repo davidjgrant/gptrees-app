@@ -126,7 +126,7 @@ export function InputForm({ inputData, image }: InputFormProps) {
         onSubmit={form.handleSubmit(onSubmit)}
         className="w-full items-center justify-center space-y-6"
       >
-        <div className="mb-2 flex w-full items-center justify-center gap-4">
+        <div className="mb-2 flex w-full flex-col items-center justify-center gap-4 md:flex-row">
           <FormField
             control={form.control}
             name="species"
@@ -158,7 +158,7 @@ export function InputForm({ inputData, image }: InputFormProps) {
             )}
           />
         </div>
-        <div className="mb-2 flex w-full items-center justify-center gap-4">
+        <div className="mb-2 flex w-full flex-col items-center justify-center gap-4 md:flex-row">
           <FormField
             control={form.control}
             name="diameter"

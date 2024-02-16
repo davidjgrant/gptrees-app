@@ -11,28 +11,28 @@ import { ResponsiveLine } from "@nivo/line";
 
 export function Analytics() {
   return (
-    <div className="grid gap-6">
+    <div className="grid w-full gap-6">
       <Card>
         <CardHeader className="flex flex-col md:flex-row md:items-center md:justify-between md:gap-4">
           <div className="flex flex-col">
-            <CardDescription className="mb-1">Total Users</CardDescription>
+            <CardDescription className="mb-1">Total Posts</CardDescription>
             <CardTitle className="text-2xl font-bold">12,345</CardTitle>
           </div>
           <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
             <div className="flex items-center gap-1">
               <ArrowUpIcon className="h-3 w-3 fill-current" />
               <span className="font-semibold">25%</span>
-              New Users{"\n                                  "}
+              New Posts
             </div>
             <div className="flex items-center gap-1">
               <ArrowDownIcon className="h-3 w-3 fill-current" />
               <span className="font-semibold">10%</span>
-              Churn{"\n                                  "}
+              Data Points
             </div>
           </div>
         </CardHeader>
         <CardContent>
-          <CurvedlineChart className="aspect-[2/1] h-[250px]" />
+          <CurvedlineChart className="h-[250px] w-full max-w-[100%]" />
         </CardContent>
       </Card>
       <Card>
@@ -55,7 +55,7 @@ export function Analytics() {
           </div>
         </CardHeader>
         <CardContent>
-          <CurvedlineChart className="aspect-[2/1] h-[250px]" />
+          <CurvedlineChart className="h-[250px] w-full max-w-[100%]" />
         </CardContent>
       </Card>
       <Card>
@@ -80,7 +80,7 @@ export function Analytics() {
           </div>
         </CardHeader>
         <CardContent>
-          <CurvedlineChart className="aspect-[2/1] h-[250px]" />
+          <CurvedlineChart className="h-[250px] w-full max-w-[100%]" />
         </CardContent>
       </Card>
     </div>

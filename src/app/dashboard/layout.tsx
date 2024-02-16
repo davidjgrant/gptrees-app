@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { TreesIcon } from "lucide-react";
+import { AxeIcon, TreesIcon } from "lucide-react";
 
 export default function DashboardLayout({
   children,
@@ -15,8 +15,8 @@ export default function DashboardLayout({
           <div className="flex flex-col gap-2">
             <div className="flex h-[60px] items-center px-6">
               <Link className="flex items-center gap-2 font-semibold" href="#">
-                <Package2Icon className="h-6 w-6" />
-                <span className="">Acme Inc</span>
+                <AxeIcon className="h-6 w-6" />
+                <p className="">WoodLogs Inc</p>
               </Link>
             </div>
             <div className="flex-1">
@@ -51,25 +51,21 @@ export default function DashboardLayout({
         </div>
         <div className="flex flex-col">
           <header className="flex h-14 items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40 lg:h-[60px]">
-            <Link className="lg:hidden" href="/">
-              <Package2Icon className="h-6 w-6" />
-              <span className="sr-only">Home</span>
-            </Link>
             <div className="w-full flex-1">
-              <h1 className="text-lg font-semibold">Recent Orders</h1>
+              <h1 className="text-md font-semibold md:text-lg">Recent Posts</h1>
             </div>
-            <form className="w-full max-w-[300px] flex-1 sm:flex-initial">
+            <form className="w-full flex-1 sm:flex-initial">
               <div className="relative">
                 <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
                 <Input
-                  className="bg-white pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
-                  placeholder="Search orders..."
+                  className="w-full bg-white pl-8 md:w-[200px] lg:w-[300px]"
+                  placeholder="Search posts..."
                   type="search"
                 />
               </div>
             </form>
           </header>
-          <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+          <main className="flex flex-1 flex-col gap-4 py-4 md:gap-8 md:p-6">
             {children}
           </main>
         </div>

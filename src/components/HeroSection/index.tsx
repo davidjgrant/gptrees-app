@@ -14,7 +14,7 @@ export function HeroSection() {
               </p>
             </div>
             <div className="mx-auto w-full max-w-full space-y-4">
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                 <div className="flex flex-col items-center space-y-2 rounded-lg border-gray-800 p-4">
                   <div className="rounded-full bg-white bg-opacity-50 p-2">
                     <InboxIcon className="mb-2 h-6 w-6 text-black opacity-75" />

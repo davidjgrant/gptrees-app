@@ -4,9 +4,5 @@ import { HeroSection } from "@/components/HeroSection";
 export default async function Home() {
   noStore();
 
-  return (
-    <main>
-      <HeroSection />
-    </main>
-  );
+  return <HeroSection />;
 }

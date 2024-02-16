@@ -12,7 +12,7 @@ export const ImagePreview = ({ images, onDeleteImage }: ImagePreviewProps) => {
   }
 
   return (
-    <div className="mb-8 flex gap-4 rounded-md border border-slate-400 bg-slate-50 p-4 xl:gap-8 xl:p-8">
+    <div className="mb-8 flex flex-col gap-4 rounded-md border border-slate-400 bg-slate-50 p-4 md:flex-row xl:gap-8 xl:p-8">
       {images.map((url) => (
         <Image
           key={url}

@@ -17,14 +17,16 @@ import {
 export function Posts() {
   return (
     <div className="rounded-lg border p-2 shadow-sm">
-      <Table>
+      <Table className="overflow-x-scroll">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Order</TableHead>
-            <TableHead className="min-w-[150px]">Customer</TableHead>
+            <TableHead className="w-[100px]">Posts</TableHead>
+            <TableHead className="min-w-[150px]">User</TableHead>
             <TableHead className="hidden md:table-cell">Channel</TableHead>
             <TableHead className="hidden md:table-cell">Date</TableHead>
-            <TableHead className="text-right">Total</TableHead>
+            <TableHead className="hidden text-right md:table-cell">
+              Total
+            </TableHead>
             <TableHead className="hidden sm:table-cell">Status</TableHead>
             <TableHead className="text-right">Actions</TableHead>
           </TableRow>
@@ -37,7 +39,9 @@ export function Posts() {
             <TableCell className="hidden md:table-cell">
               February 20, 2022
             </TableCell>
-            <TableCell className="text-right">$42.25</TableCell>
+            <TableCell className="hidden text-right md:table-cell">
+              $42.25
+            </TableCell>
             <TableCell className="hidden sm:table-cell">Shipped</TableCell>
             <TableCell className="text-right">
               <DropdownMenu>
@@ -48,8 +52,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -61,7 +65,9 @@ export function Posts() {
             <TableCell className="hidden md:table-cell">
               January 5, 2022
             </TableCell>
-            <TableCell className="text-right">$74.99</TableCell>
+            <TableCell className="hidden text-right md:table-cell">
+              $74.99
+            </TableCell>
             <TableCell className="hidden sm:table-cell">Paid</TableCell>
             <TableCell className="text-right">
               <DropdownMenu>
@@ -72,8 +78,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -85,7 +91,9 @@ export function Posts() {
             <TableCell className="hidden md:table-cell">
               August 3, 2021
             </TableCell>
-            <TableCell className="text-right">$64.75</TableCell>
+            <TableCell className="hidden text-right md:table-cell">
+              $64.75
+            </TableCell>
             <TableCell className="hidden sm:table-cell">Unfulfilled</TableCell>
             <TableCell className="text-right">
               <DropdownMenu>
@@ -96,8 +104,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -109,7 +117,9 @@ export function Posts() {
             <TableCell className="hidden md:table-cell">
               July 15, 2021
             </TableCell>
-            <TableCell className="text-right">$34.50</TableCell>
+            <TableCell className="hidden text-right md:table-cell">
+              $34.50
+            </TableCell>
             <TableCell className="hidden sm:table-cell">Shipped</TableCell>
             <TableCell className="text-right">
               <DropdownMenu>
@@ -120,8 +130,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -131,7 +141,9 @@ export function Posts() {
             <TableCell>Samantha Green</TableCell>
             <TableCell className="hidden md:table-cell">Shop</TableCell>
             <TableCell className="hidden md:table-cell">June 5, 2021</TableCell>
-            <TableCell className="text-right">$89.99</TableCell>
+            <TableCell className="hidden text-right md:table-cell">
+              $89.99
+            </TableCell>
             <TableCell className="hidden sm:table-cell">Paid</TableCell>
             <TableCell className="text-right">
               <DropdownMenu>
@@ -142,8 +154,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -153,7 +165,9 @@ export function Posts() {
             <TableCell>Adam Barlow</TableCell>
             <TableCell className="hidden md:table-cell">Online Store</TableCell>
             <TableCell className="hidden md:table-cell">May 20, 2021</TableCell>
-            <TableCell className="text-right">$24.99</TableCell>
+            <TableCell className="hidden text-right md:table-cell">
+              $24.99
+            </TableCell>
             <TableCell className="hidden sm:table-cell">Unfulfilled</TableCell>
             <TableCell className="text-right">
               <DropdownMenu>
@@ -164,8 +178,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -179,7 +193,7 @@ export function Posts() {
             </TableCell>
             <TableCell className="text-right">$99.99</TableCell>
             <TableCell className="hidden sm:table-cell">Paid</TableCell>
-            <TableCell className="text-right">
+            <TableCell className="hidden text-right md:table-cell">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button size="icon" variant="ghost">
@@ -188,8 +202,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>
@@ -203,7 +217,7 @@ export function Posts() {
             </TableCell>
             <TableCell className="text-right">$67.50</TableCell>
             <TableCell className="hidden sm:table-cell">Shipped</TableCell>
-            <TableCell className="text-right">
+            <TableCell className="hidden text-right md:table-cell">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button size="icon" variant="ghost">
@@ -212,8 +226,8 @@ export function Posts() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <DropdownMenuItem>View order</DropdownMenuItem>
-                  <DropdownMenuItem>Customer details</DropdownMenuItem>
+                  <DropdownMenuItem>View post</DropdownMenuItem>
+                  <DropdownMenuItem>User details</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </TableCell>

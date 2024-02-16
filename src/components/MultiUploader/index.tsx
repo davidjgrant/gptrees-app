@@ -51,7 +51,7 @@ export const MultiUploader = ({ onSuccess }: MultiUploaderProps) => {
 
   return (
     <>
-      <div className="mx-2 flex w-full cursor-pointer items-center justify-end p-3">
+      <div className="flex w-full cursor-pointer items-center p-3 md:mx-2 md:justify-end">
         <div {...getRootProps()}>
           <Button
             disabled={isUploading}

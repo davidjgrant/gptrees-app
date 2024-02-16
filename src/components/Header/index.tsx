@@ -8,7 +8,7 @@ import { AccountDropdown } from "../AccountDropdown";
 export const Header = ({ session }: { session: Session | null }) => {
   return (
     <header className="border-b bg-white py-4 text-zinc-900">
-      <div className="mx-auto px-4 md:px-6">
+      <div className="mx-auto md:px-6">
         <nav className="flex items-center justify-between">
           <Button
             asChild
@@ -20,8 +20,10 @@ export const Header = ({ session }: { session: Session | null }) => {
               GPTrees
             </Link>
           </Button>
-          <Navigation session={session} />
-          <AccountDropdown session={session} />
+          <div className="flex items-center gap-2">
+            <Navigation session={session} />
+            <AccountDropdown session={session} />
+          </div>
         </nav>
       </div>
     </header>
