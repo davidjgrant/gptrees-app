@@ -29,6 +29,16 @@ export const posts = createTable(
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
     updatedAt: timestamp("updatedAt").onUpdateNow(),
+    image: varchar("image", { length: 255 }),
+    species: varchar("species", { length: 255 }),
+    health: varchar("health", { length: 255 }),
+    height: varchar("height", { length: 255 }),
+    diameter: varchar("diameter", { length: 255 }),
+    notes: varchar("notes", { length: 255 }),
+    age: varchar("age", { length: 255 }),
+    coordinates: varchar("coordinates", { length: 255 }),
+    illegalActivities: varchar("illegalActivities", { length: 255 }),
+    futurePlans: varchar("futurePlans", { length: 255 }),
   },
   (example) => ({
     createdByIdIdx: index("createdById_idx").on(example.createdById),

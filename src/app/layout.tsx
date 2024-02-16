@@ -3,6 +3,9 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
+import { Header } from "@/components/Header";
+import { Toaster } from "@/components/ui/toaster";
+import { getServerAuthSession } from "@/server/auth";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,15 +18,21 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerAuthSession();
+
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+      <body className={`font-sans ${inter.variable} container h-full w-full`}>
+        <TRPCReactProvider>
+          <Header session={session} />
+          {children}
+          <Toaster />
+        </TRPCReactProvider>
       </body>
     </html>
   );
