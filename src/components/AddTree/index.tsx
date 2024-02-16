@@ -79,7 +79,7 @@ and experience in all aspects of trees and forest management.`;
         )}
         <InputForm inputData={data} image={imageUrls[0]} />
       </section>
-      <footer className="fixed bottom-0 w-full bg-slate-50 md:sticky md:w-1/2">
+      <footer className="container fixed bottom-0 w-full bg-slate-50 md:sticky">
         <Separator className="" />
         <MultiUploader onSuccess={handleSuccessfulUpload} />
       </footer>
